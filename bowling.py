@@ -7,4 +7,4 @@ class Scorer:
         return self.score
     
     def do_shoot(self, shoot):
-        self.score = shoot
+        self.score = self.score + shoot
