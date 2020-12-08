@@ -24,3 +24,13 @@ class Test:
         self.scorer.do_shoot(shoot2)
 
         assert self.scorer.getScore() == shoot1 + shoot2
+
+    def test_getScore_spare(self):
+        shoot1 = 4
+        self.scorer.do_shoot(shoot1)
+        shoot2 = 6
+        self.scorer.do_shoot(shoot2)
+        shoot3 = 1
+        self.scorer.do_shoot(shoot3)
+
+        assert self.scorer.getScore() == 12
